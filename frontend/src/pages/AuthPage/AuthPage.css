@@ -1,0 +1,45 @@
+.AuthPage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: linear-gradient(149.79deg, #C5FFFF 0%, #FFFFFF 84.63%);
+    justify-content: center;
+    align-items: center;
+}
+
+.AuthPage .content {
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.AuthPage .content .title {
+    align-self: flex-start;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 57px;
+    color: #2364A0;
+    margin-bottom: 34px;
+}
+
+
+.AuthPage .content .title .subTitle {
+    margin-left: 12px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #70AEE7;
+    cursor: pointer;
+}
+
+.AuthPage .content .title .subTitle:hover {
+    color: #3283ce;
+}
+
+.AuthPage .content .inputBottomMargin {
+    margin-bottom: 28px;
+}

@@ -1,0 +1,1 @@
+export type { ResponseModel } from '../../../backend/models/response'

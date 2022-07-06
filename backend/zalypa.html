@@ -1,0 +1,68 @@
+<html>
+
+<body>
+<div id = "zaloopa"></div>
+    <input id="fighterInput" type="text" />
+    <button onclick="createFighter()">Add</button>
+    <button onclick="deleteFighter()">Del</button>
+    <script>
+         const topFightersUrl = 'http://localhost:8080/api/fighters/top'
+        const topFigthersReq = new XMLHttpRequest();
+        topFigthersReq.open('GET', topFightersUrl)
+        topFigthersReq.onload = handleTopFightersLoad
+        topFigthersReq.send()
+
+        function handleTopFightersLoad(e) {
+            const data = JSON.parse(e.target.response)
+            renderData(data)
+        }
+
+        function renderData(data) {
+            let content = document.getElementById('zaloopa')
+            content.innerHTML = ''
+            let list = document.createElement('div')
+            const title = document.createElement('h1')
+            title.innerText = 'Top Fighters: '
+            list.appendChild(title)
+
+            function listItemHandleClick(e) {
+                const text = e.target.innerText
+                fighterInput.value = text
+            }
+
+            for (let i = 0; i < data.length; i++) {
+                let listItem = document.createElement('div')
+                listItem.innerText = data[i]
+                listItem.onclick = listItemHandleClick
+                list.appendChild(listItem)
+            }
+            zaloopa.appendChild(list)
+        }
+
+        function createFighter() {
+            const createTopFighterUrl = 'http://localhost:8080/api/fighters/create'
+            const createTopFighterReq = new XMLHttpRequest()
+            createTopFighterReq.open('POST', createTopFighterUrl)
+            let fighterInput = document.getElementById('fighterInput')
+            createTopFighterReq.send(fighterInput.value)
+            createTopFighterReq.onload = (e) => {
+                const data = JSON.parse(e.target.response)
+                renderData(data)
+            }
+        }
+
+        function deleteFighter() {
+            const deleteFighterUrl = 'http://localhost:8080/api/fighters/delete'
+            const deleteFighterReq = new XMLHttpRequest()
+            deleteFighterReq.open('POST', deleteFighterUrl)
+            let fighterInput = document.getElementById('fighterInput')
+            deleteFighterReq.send(fighterInput.value)
+            deleteFighterReq.onload = (e) => {
+                const data = JSON.parse(e.target.response)
+                renderData(data)
+            }
+        }
+    </script>
+</body>
+
+</html>
