@@ -1,5 +1,14 @@
-# advToDo
-React+ MobX CRUT to-do list with auth.
+## Drag n drop shop page with backend
+
+#Frontend:
+* react
+* typescript
+* mobx
+
+# Backend:
+* nodejs
+* express
+* json db
 
 
 ## Launch
