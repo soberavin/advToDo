@@ -5,7 +5,7 @@ import { ResponseModel } from './models/response'
 import { TaskModel } from './models/task';
 import { taskController } from './controllers/taskController';
 
-//create a server object:
+
 http.createServer(function (req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
 
@@ -135,4 +135,4 @@ http.createServer(function (req, res) {
 
 
 
-}).listen(8080); //the server object listens on port 8080
+}).listen(8080); 

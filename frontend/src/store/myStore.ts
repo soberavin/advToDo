@@ -22,7 +22,7 @@ export class Store {
         this.setUserData(undefined)
     }
 
-    //* Взаимодействие с авторизацией
+    //* Auth interactions
 
 
     signInReq(reqData: UserLoginPayload) {
@@ -63,7 +63,7 @@ export class Store {
             })
     }
 
-    //* Взаимодействия с айтемами листа
+    //* List items interactions
 
     getUserTasks(payload: UserGetTasksPayload) {
         const resultPromise = fetch('http://localhost:8080/api/user/tasks',{
