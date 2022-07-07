@@ -1,6 +1,6 @@
 ## Drag n drop shop page with backend
 
-#Frontend:
+# Frontend:
 * react
 * typescript
 * mobx
