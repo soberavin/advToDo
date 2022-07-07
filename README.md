@@ -10,7 +10,7 @@ cd .\frontend\
 npm run start
 ```
 
-#Features
+# Features
 * Create new user by signing up
 * Authorization
 * Tasklists stick to userId
