@@ -1,15 +1,4 @@
-## Drag n drop shop page with backend
-
-# Frontend:
-* react
-* typescript
-* mobx
-
-# Backend:
-* nodejs
-* express
-* json db
-
+# Advanced To-Do list
 
 ## Launch
 ```
