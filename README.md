@@ -1,4 +1,6 @@
 # Advanced To-Do list
+* Backend node.js
+* Frontend React + MobX
 
 ## Launch
 ```
